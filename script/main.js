@@ -121,6 +121,14 @@ $(function () {
 
 });
 
+
+$(function () {
+    $('.sidebar> ul> li').click(function () {
+        $(this).children('.m_sub').stop().slideToggle();
+    });
+
+});
+
 //이달의 책 미리보기
 $(function () {
     var swiper = new Swiper('.gallery .gallery_inner ', {
@@ -171,12 +179,11 @@ $(function () {
 
 });
 
-// 슬라이드 sns
-$(function () {
+$(function(){
     var swiper = new Swiper('.slide ', {
-        slidesPerView: 4,
+        slidesPerView: 1,
         centeredSlides: true,
-        spaceBetween: 30,
+        spaceBetween: 10,
         speed: 1500,
         autoplay: {
             delay: 1000,
@@ -187,9 +194,18 @@ $(function () {
             nextEl: '.slide .swiper-button-next',
             prevEl: '.slide .swiper-button-prev',
         },
+        breakpoints: {
+            600: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            800: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            }
+        }
     });
 });
-
 
 // sub1 시작
 // slogan 밑줄
