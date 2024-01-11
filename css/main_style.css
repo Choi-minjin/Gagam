@@ -653,6 +653,7 @@ article h4 {
     display: inline-block;
     width: 767px;
     margin: 60px auto 20px;
+    line-height: 36px;
 }
 
 #shop p span {
@@ -700,12 +701,13 @@ article h4 {
 }
 .shop_text {
     position: absolute;
-    left: 20%;
+    left: 50%;
     bottom: 15%;
     text-align: center;
+    transform: translateX(-50%);
     width: 70%;
     height: 70%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
     opacity: 0;
     transition: all 1s;
     border-radius: 150px;
@@ -729,7 +731,6 @@ article h4 {
 
 .shop_view ul li:hover .shop_text {
     opacity: 1;
-    transform: scale(1.2);
 }
 
 /* contents */
@@ -969,7 +970,6 @@ footer {
     }
     .shop_text{
         width: 220px;
-        left: 30%;
     }
     .shop_btn{
         margin-top: 50px;
@@ -1006,6 +1006,19 @@ footer {
 }
 @media (max-width:770px){
 
+    .top_btn, .bottom_btn{
+        right: 30px;
+    }
+
+    .con_box, #sns{
+        width: 90%;
+        margin: auto;
+    }
+
+    .main_about{
+        width: 90%;
+    }
+
     .gallery .swiper-pagination, .gallery .swiper-button-prev,
     .gallery .swiper-button-next, #shop p span{
         display: none;
@@ -1013,15 +1026,18 @@ footer {
     #shop p{
         width: 90%;
     }
-    .shop_text{
-        left: 20%;
+    .shop_view{
+        height: auto;
     }
+    
     .mgz p{
         width: 500px;
         left: 70px;
     }
     #footer_in{
         flex-direction: column;
+        width: 90%;
+        margin: auto;
     }
     .f_rigth{
         justify-content: space-between;
@@ -1038,6 +1054,10 @@ footer {
 
 /* 모바일 */
 @media (max-width:620px){
+
+    h2 img{
+        width: 50%;
+    }
 
     .t_bn, .gnb, #nav_bg{
         display: none;
@@ -1069,18 +1089,6 @@ footer {
     }
      .mgz{
         width: 100%;
-    }
-    /* .mgz p{
-        left: 30px;
-    }
-    .mgz img{
-        left: 30px;
-    }
-    .mgz_btn{
-        right: auto;
-        left: 280px;
-    } */
-    .mgz{
         background: none;
     }
     .mgz p{
@@ -1114,16 +1122,19 @@ footer {
         width: 100%;
         margin: 30px 0;
     }
-    .shop_text{
-        left: 30%;
-    }
-    footer .f_rigth{
-        flex-direction: column;
-    }
     #shop{
         width: 100%;
         box-sizing: border-box;
     }
+    
+    #sns{
+        margin-top: 100px;
+    }
+
+    footer .f_rigth{
+        flex-direction: column;
+    }
+    
     .m_nav {
         display: block;
     }
@@ -1138,7 +1149,7 @@ footer {
         width:40px;
         height:30px;
         position:fixed;
-        right:30px;
+        right:20px;
         top:30px;
         z-index:100;
         transition:all 0.5s;
@@ -1233,6 +1244,10 @@ footer {
         padding: 30px 0 10px;
     }
 
+    .mgz{
+        height: auto;
+    }
+
     .mgz_btn{
         top: 110px;
     }
@@ -1240,9 +1255,16 @@ footer {
         width: 100%;
         box-sizing: border-box;
     }
+    #footer_in{
+        text-align: center;
+    }
     .f_left .lnb_l{
         flex-direction: column;
         text-align: center;
     }
+    .f_rigth{
+        margin: auto;
+    }
+
 
 }
