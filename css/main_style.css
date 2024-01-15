@@ -662,7 +662,7 @@ article h4 {
     background: #d8f0ff;
     display: block;
     position: absolute;
-    top: 4px;
+    top: 10px;
     z-index: -1;
 }
 
